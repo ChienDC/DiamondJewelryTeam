@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DiamondJewelry.Data
 {
-    public class JewelryDbContext : DbContext
+    public class JewelryDbContext : Microsoft.EntityFrameworkCore.DbContext
     {
         public JewelryDbContext(DbContextOptions<JewelryDbContext> options) : base(options) { }
 
