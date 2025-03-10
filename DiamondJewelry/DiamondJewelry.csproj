@@ -7,17 +7,18 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="Bogus" Version="35.6.2" />
       <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.0" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0">
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
-      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
-      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.0">
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.0">
         <PrivateAssets>all</PrivateAssets>
         <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       </PackageReference>
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
       <PackageReference Include="System.Linq.Dynamic.Core" Version="1.6.0.2" />
     </ItemGroup>
 
@@ -1544,10 +1545,205 @@
       <_ContentIncludedByDefault Remove="wwwroot\vendor\libs\toastr\toastr.js" />
       <_ContentIncludedByDefault Remove="wwwroot\vendor\libs\typeahead-js\typeahead.css" />
       <_ContentIncludedByDefault Remove="wwwroot\vendor\libs\typeahead-js\typeahead.js" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\DimQltyMst\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\DimQltyMst\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Role\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Role\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Role\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Role\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Role\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\AdminLoginMst\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Page2\Index2.cshtml" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-academy-course-details.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-academy-course.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-academy-dashboard.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-access-permission.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-access-roles.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-calendar-events.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-calendar.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-chat.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-ecommerce-category-list.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-ecommerce-customer-all.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-ecommerce-customer-detail-overview.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-ecommerce-customer-detail.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-ecommerce-dashboard.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-ecommerce-order-details.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-ecommerce-order-list.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-ecommerce-product-add.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-ecommerce-product-list.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-ecommerce-referral.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-ecommerce-reviews.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-ecommerce-settings.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-email.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-invoice-add.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-invoice-edit.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-invoice-list.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-invoice-print.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-kanban.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-logistics-dashboard.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-logistics-fleet.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-user-list.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-user-view-account.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-user-view-billing.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-user-view-security.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\app-user-view.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\cards-actions.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\cards-advance.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\cards-statistics.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\charts-apex.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\charts-chartjs.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\config.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\dashboards-analytics.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\dashboards-crm.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\extended-ui-blockui.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\extended-ui-drag-and-drop.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\extended-ui-media-player.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\extended-ui-misc-clipboardjs.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\extended-ui-misc-idle-timer.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\extended-ui-misc-numeraljs.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\extended-ui-perfect-scrollbar.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\extended-ui-star-ratings.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\extended-ui-sweetalert2.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\extended-ui-timeline.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\extended-ui-tour.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\extended-ui-treeview.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\form-basic-inputs.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\form-input-group.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\form-layouts.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\form-validation.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\form-wizard-icons.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\form-wizard-numbered.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\form-wizard-validation.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\forms-editors.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\forms-extras.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\forms-file-upload.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\forms-pickers.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\forms-selects.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\forms-sliders.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\forms-tagify.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\forms-typeahead.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\front-config.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\front-main.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\front-page-landing.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\front-page-payment.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\front-page-pricing.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\main.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\maps-leaflet.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\modal-add-new-address.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\modal-add-new-cc.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\modal-add-permission.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\modal-add-role.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\modal-create-app.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\modal-edit-cc.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\modal-edit-permission.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\modal-edit-user.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\modal-enable-otp.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\modal-share-project.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\modal-two-factor-auth.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\offcanvas-add-payment.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\offcanvas-send-invoice.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\pages-account-settings-account.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\pages-account-settings-billing.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\pages-account-settings-security.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\pages-auth-multisteps.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\pages-auth-two-steps.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\pages-auth.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\pages-pricing.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\site.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\tables-datatables-advanced.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\tables-datatables-basic.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\tables-datatables-extensions.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\transactions-add-update.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\transactions-delete.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\transactions-list.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\ui-app-brand.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\ui-cards-analytics.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\ui-carousel.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\ui-menu.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\ui-modals.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\ui-navbar.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\ui-popover.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\ui-toasts.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\wizard-ex-checkout.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\wizard-ex-create-deal.js" />
+      <_ContentIncludedByDefault Remove="wwwroot\js\wizard-ex-property-listing.js" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\DimMst\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\DimMst\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\DimMst\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\DimMst\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\DimMst\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\DimQltyMst\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\DimQltyMst\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\DimQltyMst\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\DimQltyMst\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\DimQltySubMst\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\Shared\_Layout.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\ItemMst\Detail.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\ItemMst\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\ItemMst\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\ItemMst\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\ItemMst\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\ItemMst\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\ItemMst\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\UserRegMst\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\UserRegMst\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\UserRegMst\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\UserRegMst\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Admin\Views\UserRegMst\Index.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="wwwroot\" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Product\Create.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Product\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Product\Details.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Product\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Product\Index.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Role\Create.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Role\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Role\Details.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Role\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Role\Index.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Product\Create.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Product\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Product\Details.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Product\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Product\Index.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\DimMst\Create.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\DimMst\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\DimMst\Details.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\DimMst\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\DimMst\Index.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\DimQltyMst\Create.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\DimQltyMst\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\DimQltyMst\Details.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\DimQltyMst\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\DimQltyMst\Index.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\DimQltySubMst\Create.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Home\Index.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\ItemMst\Create.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\ItemMst\Details.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\ItemMst\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\ItemMst\Index.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Page2\Index.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\Error.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\Sections\Footer\_Footer.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\Sections\Menu\_HorizontalMenu.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\Sections\Menu\_VerticalMenu.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\Sections\Navbar\_Navbar.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\Sections\Navbar\_NavbarPartial.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\Sections\_Scripts.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\Sections\_ScriptsFront.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\Sections\_ScriptsIncludes.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\Sections\_ScriptsIncludesFront.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\Sections\_Styles.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\Sections\_StylesFront.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\Sections\_Variables.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\_BlankLayout.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\_CommonMasterLayout.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\_ContentNavbarLayout.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\_FrontLayout.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\_HorizontalLayout.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Admin\Views\Shared\_ValidationScriptsPartial.cshtml" />
     </ItemGroup>
 
 </Project>

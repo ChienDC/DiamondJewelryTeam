@@ -2,7 +2,7 @@ namespace DiamondJewelry.Models
 {
     public class AdminLoginMst
     {
-        public string UserName { get; set; } // Khóa chính
-        public string Password { get; set; } // Bắt buộc
+        public string UserName { get; set; } // Key
+        public string Password { get; set; } // required
     }
 }

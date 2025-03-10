@@ -1,8 +1,11 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace DiamondJewelry.Models
 {
     public class GoldKrtMst
     {
-        public int GoldType_ID { get; set; } // Khóa chính
-        public string Gold_Crt { get; set; } // Ví dụ: 18K, 22K
+      [Key]
+        public int GoldType_ID { get; set; } // Key
+        public string Gold_Crt { get; set; } // Ex: 18K, 22K
     }
 }

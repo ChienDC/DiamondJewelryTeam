@@ -1,8 +1,11 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace DiamondJewelry.Models
 {
     public class Inquiry
     {
-        public int ID { get; set; } // Khóa chính
+      [Key]
+        public int ID { get; set; } // Key
         public string Name { get; set; }
         public string City { get; set; }
         public string Contact { get; set; }

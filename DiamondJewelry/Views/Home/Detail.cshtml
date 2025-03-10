@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Product Details</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="~/css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Baloo+Chettan|Poppins:400,600,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="~/css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="~/css/responsive.css" rel="stylesheet" />
+  <style>
+    /* Additional styling for product details page */
+    .product-detail {
+      margin-top: 30px;
+    }
+    .product-img {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .product-info h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+    .product-info p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .back-link {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body class="sub_page">
+
+<div class="hero_area">
+  <!-- header section starts -->
+  <header class="header_section">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+          <img src="~/images/logo.png" alt="">
+          <span>
+            Lodge
+          </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" asp-controller="Home" asp-action="About">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" asp-controller="Home" asp-action="List">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" asp-controller="Home" asp-action="Contact">Contact us</a>
+              </li>
+            </ul>
+          </div>
+          <div class="quote_btn-container">
+            <a asp-controller="Home" asp-action="Cart">
+              <img src="~/images/cart.png" alt="Cart">
+              <div class="cart_number">
+                0
+              </div>
+            </a>
+            <form class="form-inline">
+              <button class="btn my-2 my-sm-0 nav_search-btn" type="submit"></button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- end header section -->
+</div>
+
+<!-- Product Details Section -->
+<section class="product-detail">
+  @model DiamondJewelry.Models.ItemMst
+
+  @{
+    ViewData["Title"] = "Product Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+  }
+  <div class="container">
+    <div class="row">
+      <!-- Product Image -->
+      <div class="col-md-6">
+        <img class="product-img" src="@Model.Img" alt="Product Image" style="max-width: 100%; height: auto;">
+      </div>
+
+      <div class="col-md-6 product-info">
+        <h2>@Model.Style_Code</h2>
+        <p><strong>Price:</strong> @Model.MRP.ToString("C", new System.Globalization.CultureInfo("en-US"))</p>
+
+        <hr>
+
+        <table class="table table-bordered">
+          <tbody>
+          <tr>
+            <th>Approximate Weight</th>
+            <td>@Model.Tot_Gross_Wt</td>
+          </tr>
+          <tr>
+            <th>Main Stone Type</th>
+            <td>@Model.GoldType_ID</td>
+          </tr>
+          <tr>
+            <th>Main Stone Size</th>
+            <td>5.0</td>
+          </tr>
+          <tr>
+            <th>Secondary Stone Type</th>
+            <td>Moissanite</td>
+          </tr>
+          <tr>
+            <th>Number of Main Stones</th>
+            <td>1</td>
+          </tr>
+          <tr>
+            <th>Number of Secondary Stones</th>
+            <td>38</td>
+          </tr>
+          <tr>
+            <th>Gender</th>
+            <td>Female</td>
+          </tr>
+          <tr>
+            <th>Brand</th>
+            <td>PNJ</td>
+          </tr>
+          <tr>
+            <th>Certificate</th>
+            <td>
+              <a href="~/images/giay-chung-nhan.png" target="_blank">View Certificate</a>
+              @Model.Certify_ID
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <hr>
+
+        <h4><strong>Description:</strong></h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        <table class="table table-bordered">
+          <tbody>
+          <tr>
+            <th>Category</th>
+            <td>Ring</td>
+          </tr>
+          <tr>
+            <th>Color</th>
+            <td>Gold</td>
+          </tr>
+          <tr>
+            <th>Size</th>
+            <td>16</td>
+          </tr>
+          </tbody>
+        </table>
+
+        <div class="product-buttons">
+          <a asp-controller="Home" asp-action="AddToCart" asp-route-id="@Model.Style_Code" asp-route-name="@Model.Style_Code" asp-route-price="@Model.MRP" class="btn btn-primary">
+            Add to Cart
+          </a>
+          <a asp-controller="Home" asp-action="Cart" class="btn btn-success">View Cart</a>
+        </div>
+
+        <div class="back-link mt-3">
+          <a asp-controller="Home" asp-action="List">&larr; Back to Product List</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>
+

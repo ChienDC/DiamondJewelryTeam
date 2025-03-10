@@ -1,0 +1,105 @@
+<title>Product List</title>
+
+<!-- Additional styles for the List page -->
+<section class="product-list">
+  <div class="container">
+    <div class="heading_container">
+      <h2>Product List</h2>
+    </div>
+
+    <div class="row">
+      <!-- Left filter column -->
+      <div class="col-md-3">
+        <div class="filter-section">
+          <h5>Filter Products</h5>
+          <form id="filterForm">
+            <!-- Filter by category -->
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select class="form-control" id="category" name="category">
+                <option value="">All</option>
+                <option value="1">Bracelets</option>
+                <option value="2">Necklaces</option>
+                <option value="3">Rings</option>
+                <option value="4">Earrings</option>
+              </select>
+            </div>
+
+            <!-- Filter by price range -->
+            <div class="form-group">
+              <label for="priceRange">Price Range</label>
+              <select class="form-control" id="priceRange" name="priceRange">
+                <option value="">All</option>
+                <option value="0-10000">$0 - $10,000</option>
+                <option value="10000-20000">$10,000 - $20,000</option>
+                <option value="20000-30000">$20,000 - $30,000</option>
+                <option value="30000-40000">$30,000 - $40,000</option>
+                <option value="40000-100000">$40,000 and above</option>
+              </select>
+            </div>
+
+            <!-- Filter by popularity -->
+            <div class="form-group">
+              <label for="popularity">Popularity</label>
+              <select class="form-control" id="popularity" name="popularity">
+                <option value="">All</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+            </div>
+
+            <!-- Filter by color -->
+            <div class="form-group">
+              <label for="color">Color</label>
+              <select class="form-control" id="color" name="color">
+                <option value="">All</option>
+                <option value="red">Red</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <option value="yellow">Yellow</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Filter</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right product list column -->
+      @model List<DiamondJewelry.Models.ItemMst>
+
+      @{
+        ViewData["Title"] = "Product List";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+      }
+
+      <div class="col-md-9">
+        <div class="row" id="productsContainer">
+          @if (Model != null && Model.Any())
+          {
+            @foreach (var item in Model)
+            {
+              <div class="col-md-4 mb-4">
+                <div class="product-item" data-prod_id="@item.Prod_ID" data-price="@item.MRP" data-popularity="high">
+                  <img src="@item.Img" alt="@item.Style_Code" class="img-fluid">
+                  <h5>@item.Style_Code</h5>
+                  <p>Price: $@item.MRP</p>
+                  <a asp-controller="Home" asp-action="Detail" asp-route-id="@item.Style_Code" class="btn btn-secondary">View Details</a>
+                </div>
+              </div>
+            }
+          }
+          else
+          {
+            <div class="col-12 text-center">
+              <p>No products available.</p>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="pagination" class="mt-4 text-center"></div>
+</section>
